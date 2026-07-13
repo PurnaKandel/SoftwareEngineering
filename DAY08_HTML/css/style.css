@@ -10,7 +10,19 @@ body{
 }
 
 /*Navigation Bar*/
-.navbar{
+.top-nav{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	background:#c90b34;
+	padding:15px 30px;
+	min-height: 50px;
+	position:sticky;
+	top:0;
+	z-index:1000;
+}
+
+.category-nav{
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
@@ -39,6 +51,21 @@ body{
 	color:#dddddd;
 	font-size: 11px;
 }
+.top{
+	list-style:none;
+	display:flex;
+	gap:30px;
+}
+.top a{
+	transition:0.3s;
+	color:white;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+.top a:hover{
+	color:#FFD700;
+}
 
 .menu{
 	list-style:none;
@@ -61,6 +88,7 @@ body{
 text-align:center;
 padding:20px 20px;
 }
+
 button{
 	transition:0.3s;
 	background:#ff6600;
@@ -90,7 +118,7 @@ img{
 }
 
 .products{
-	display:flex;
+	display:grid;  /* Use flexbox for layout, grid can also be used */
 	grid-template-columns:repeat(4, 1fr);
 	gap:20px;
 }
