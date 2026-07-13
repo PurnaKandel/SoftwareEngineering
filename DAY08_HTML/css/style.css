@@ -67,7 +67,7 @@ button{
 	color:white;
 	border:none;
 	padding:15px 35px;
-	font-size:18px;
+	font-size:1.2rem;
 	border-radius:8px;
 	cursor:pointer;
 	margin-top:25px;
@@ -76,6 +76,36 @@ button{
 button:hover{
 	transform:scale(1.08);
 	box-shadow:0 8px 18px rgba(0, 0, 0, 0.25);
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+
+.container{
+	width:90%;
+	max-width:1200px;
+	margin:auto;
+
+}
+
+.products{
+	display:flex;
+	grid-template-columns:repeat(4, 1fr);
+	gap:20px;
+}
+	/*Phone*/
+	@media(max-width: 768px){
+	products{
+		flex-direction:column;
+	}
+}
+/*Tablet*/
+@media(max-width: 992px){
+	.products{
+		flex-direction:column;
+		grid-template-columns:repeat(2, 1fr);
+	}
 }
 
 /* Footer Styles */
