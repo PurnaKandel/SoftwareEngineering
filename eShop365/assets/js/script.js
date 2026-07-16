@@ -1,9 +1,9 @@
-let cartcount=0;
-const cartcounter=document.getElementById("cart-count");
-const addButton=document.getElementById("add-cart");
+let cartCount=0;
+const cartCounter = document.getElementById("cart-count");
+const addButton = document.getElementById("add-cart");
 addButton.addEventListener("click", function() {
-    cartcount++;
-    cartcounter.textContent=cartcount;
+    cartCount++;
+    cartCounter.textContent=cartCount;
 });
 
 
