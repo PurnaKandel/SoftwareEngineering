@@ -58,8 +58,36 @@ body{
 }
 
 .hero{
-    display: grid;
-    justify-content:space-around ;
-    align-items: center;
+    position:relative;
 }
+
+.hero img{
+    width:100%;
+    display:block;
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform:translateY(+150%);
+}
+
+.btn-shop{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background:#e63946;
+    color:white;
+    text-decoration: none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-shop:hover{
+    background: #b71c1c;
+}
+
+
 
