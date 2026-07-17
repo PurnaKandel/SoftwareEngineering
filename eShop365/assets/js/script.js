@@ -5,15 +5,3 @@ addButton.addEventListener("click", function() {
     cartCount++;
     cartCounter.textContent=cartCount;
 });
-
-
-
-
-
-
-
-
-
-
-
-9
