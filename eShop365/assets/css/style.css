@@ -4,9 +4,9 @@
     padding:0;
     box-sizing:border-box;
 }
-/* Whole Webpage content by default */
+/* Whole Webpage content by default #f5f5f5 white*/
 body{
-    background-color: #f5f5f5;
+    background-color: #F5F7FA;
     font-family:Arial, sans-serif;
     font-size:large;
 }
@@ -70,6 +70,7 @@ body{
 }
 
 .home{
+    text-decoration: #ccc;
     display: inline-block;
     margin-top: 20px;
     padding: 5px 20px;
@@ -187,7 +188,7 @@ body{
     padding:20px;
 }
 .product-card{
-    background:#066aec;
+    background:#FFFFFF;
     width:260px;
     border-radius: 15px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
@@ -223,12 +224,12 @@ body{
 }
 .product-name{
     font-size: 1.25rem;
-    color: black;
+    color:#212121;
     margin-bottom: 8px;
     font-weight: 600;
 }
 .product-rating span{
-    color: #ec9006;
+    color: #FF9800;
     margin-left: 5px;
 }
 
