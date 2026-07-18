@@ -1,5 +1,6 @@
 let cartCount=0;
 //getElementById() for one element and queryselectorall() for many elements
+
 //const cartCounter = document.getElementById("cart-count");
 //const addButton = document.getElementById("add-cart");
 //addButton.addEventListener("click", function() {
@@ -7,10 +8,11 @@ let cartCount=0;
  //   cartCounter.textContent=cartCount;
 //});
 
-const button=document.querySelectorAll(".add-to-cart-button");
-button.forEach(button=>{
+const cartCounter=document.getElementById("cart-count");
+const button=document.querySelectorAll(".add-to-cart-btn");
+button.forEach(function(button) {
     button.addEventListener("click", function(){
-        //Add product to cart
+        //console.log(button);
         cartCount++;
         cartCounter.textContent=cartCount;
     });
