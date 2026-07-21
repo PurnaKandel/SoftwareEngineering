@@ -202,11 +202,11 @@ body{
     gap:30px;
 }
 .product-card{
-    background:#FFFFFF;
-    border-radius: 18px;
+    background:white;
+    border-radius: 15px;
     overflow:hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.35s;
+    transition: 0.3s;
     position: relative;
     text-align: center;
     padding: 20px;
@@ -214,7 +214,12 @@ body{
 /* Hover Effecr */
 .product-card:hover{
     transform:translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+.product-card img{
+    width:100%;
+    height:220px;
+    object-fit: contain;
 }
 /* Image Styling */
 .product-image{
@@ -260,7 +265,12 @@ body{
 .cart-btn:hover{
     background: #ff6b00;
 }
-
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top: 40px;
+}
 .product-card:hover .product-image img{
     transform: scale(1.05) rotate(-5px);
 }
