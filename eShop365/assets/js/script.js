@@ -17,3 +17,12 @@ button.forEach(function(button) {
         cartCounter.textContent=cartCount;
     });
 });
+
+//const products=[
+   // { name:"Nike Running Shoes",
+      //  price: $100.99,
+     //   rating:4.8,
+    //    image:"assets/image/log-1.jpg"
+   // },
+
+//]
