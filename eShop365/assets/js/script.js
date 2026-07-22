@@ -26,3 +26,19 @@ button.forEach(function(button) {
    // },
 
 //]
+
+const slider = document.querySelector(".product-grid");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+let scrollAmount = 0;
+nextBtn.addEventListener("click", () => {
+    scrollAmount += 280;
+    slider .style.transform = 'translateX(-${scrollAmount}px)';
+});
+prevBtn.addEventListener("click", () => {
+scrollAmount -= 280;
+if(scrollAmount < 0){
+    scrollAmount = 0;
+}
+slider.style.transform ='translateX(-${scrollAmount}px)';
+});

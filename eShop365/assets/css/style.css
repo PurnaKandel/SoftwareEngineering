@@ -221,6 +221,20 @@ body{
     height:220px;
     object-fit: contain;
 }
+.section-header button{
+    width:45px;
+    height: 45px;
+    border:none;
+    border-radius:50%;
+    background:#le3a8;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+
 /* Image Styling */
 .product-image{
     width: 100%;
