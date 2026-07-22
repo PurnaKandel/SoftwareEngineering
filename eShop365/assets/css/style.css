@@ -226,12 +226,11 @@ body{
     height: 45px;
     border:none;
     border-radius:50%;
-    background:#le3a8;
+    background: #1e3a8a;
     color:white;
     font-size:20px;
     cursor:pointer;
     transition:.3s;
-
 }
 
 
