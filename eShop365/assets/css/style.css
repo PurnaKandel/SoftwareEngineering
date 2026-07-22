@@ -16,10 +16,6 @@ body{
     height:auto;
     border-radius: 1rem;
 }
-.sologan{
-    text-align: center;
-    text-shadow: #ec9006;
-}
 
 .banner{
     width:100%;
@@ -180,7 +176,7 @@ body{
 }
 /* Featured Products */
 .featured-products{
-    padding:70px 8 px;
+    padding:70px 8px;
     background:#f7f8fa;
 }
 .featured-products h2{
@@ -209,13 +205,13 @@ body{
 .product-grid{
     display:flex;
     gap: 20px;
-    transition:ttansform .5s ease;
+    transition: transform .5s ease;
 }
 
 /* Product Card Container */
 .products-container{
     display:grid;
-    grid-template-columns:repeat(4 1fr);
+    grid-template-columns:repeat(4, 1fr);
     gap:30px;
 }
 .product-card{
@@ -308,7 +304,7 @@ body{
     margin-top: 40px;
 }
 .product-card:hover .product-image img{
-    transform: scale(1.05) rotate(-5px);
+    transform: scale(1.05) rotate(45deg);
 }
 
 /* Details Section */
