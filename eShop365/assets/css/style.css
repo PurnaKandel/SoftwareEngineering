@@ -195,6 +195,23 @@ body{
     margin-bottom: 45px;
 }
 
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom:20px;
+}
+
+.slider-container{
+    overflow: hidden;
+    width: 100%;
+}
+.product-grid{
+    display:flex;
+    gap: 20px;
+    transition:ttansform .5s ease;
+}
+
 /* Product Card Container */
 .products-container{
     display:grid;
@@ -202,6 +219,8 @@ body{
     gap:30px;
 }
 .product-card{
+    min-width: 260px;
+    flex-shrink: 0;
     background:white;
     border-radius: 15px;
     overflow:hidden;
