@@ -233,6 +233,10 @@ body{
     transition:.3s;
 }
 
+.section-headerbutton:hover{
+    background: #f97316;
+}
+
 
 /* Image Styling */
 .product-image{
