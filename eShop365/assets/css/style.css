@@ -295,10 +295,11 @@ body{
 }
 .product-grid{
     display: flex;
+     gap:20px;
+   transition:transform 0.6s ease;
    /* grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); */
    /* margin-top: 40px; */
-   gap:20px;
-   transition:transform 0.6s ease-in-out;
+  
    
 }
 .product-card:hover .product-image {

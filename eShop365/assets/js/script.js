@@ -4,8 +4,8 @@ let cartCount=0;
 //const cartCounter = document.getElementById("cart-count");
 //const addButton = document.getElementById("add-cart");
 //addButton.addEventListener("click", function() {
-  //  cartCount++;
- //   cartCounter.textContent=cartCount;
+    //cartCount++;
+   //cartCounter.textContent=cartCount;
 //});
 
 const cartCounter=document.getElementById("cart-count");
@@ -30,7 +30,8 @@ button.forEach(function(button) {
 const slider = document.querySelector(".product-grid");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
-// let scrollAmount = 0;
+ let scrollAmount = 0;
+ 
 const cards=document.querySelectorAll(".product-card");
 const cardwidth=280;
 let currentIndex =0;
@@ -40,8 +41,8 @@ function  updateSlider(){
     }
     
 nextBtn.addEventListener("click", () => {
-   // scrollAmount += 280;
-    //slider .style.transform = `translateX(-${scrollAmount}px)`;
+    scrollAmount += 280;
+    slider .style.transform = `translateX(-${scrollAmount}px)`;
     if(currentIndex<cards.length-1){
         currentIndex=0;
     }
@@ -49,17 +50,17 @@ nextBtn.addEventListener("click", () => {
 });
 
 prevBtn.addEventListener("click", () => {
-//scrollAmount -= 280;
-//if(scrollAmount < 0){
-  //  scrollAmount = 0;
+scrollAmount -= 280;
+if(scrollAmount < 0){
+    scrollAmount = 0;
   if(currentIndex>0){
     currentIndex--;
 }else{
     currentIndex=cards.length-1;
 }
 updateSlider();
-//}
-//slider.style.transform =`translateX(-${scrollAmount}px)`;
+}
+slider.style.transform =`translateX(-${scrollAmount}px)`;
 });
 
 /*  const products=[
