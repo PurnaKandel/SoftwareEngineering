@@ -36,7 +36,7 @@ const cardwidth=280;
 let currentIndex =0;
 function  updateSlider(){
     slider.style.transform=
-    `traslateX(-${currentIndex*cardWidth}px)`;
+    `translateX(-${currentIndex*cardWidth}px)`;
     }
     
 nextBtn.addEventListener("click", () => {
@@ -62,8 +62,8 @@ updateSlider();
 //slider.style.transform =`translateX(-${scrollAmount}px)`;
 });
 
-const products=[
-    {
+/*  const products=[
+  {
         name:"Nike Air Runner",
         price:3999,
         rating:5,
@@ -76,6 +76,7 @@ const products=[
         image:"adidas.jpg",
     }
 ];
+*/
 
 //automatic slidding
 setInterval(function(){
