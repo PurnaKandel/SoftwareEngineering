@@ -44,3 +44,18 @@ if(scrollAmount < 0){
 }
 slider.style.transform =`translateX(-${scrollAmount}px)`;
 });
+
+const products=[
+    {
+        name:"Nike Air Runner",
+        price:3999,
+        rating:5,
+        image:"nike.jpg"
+    },
+    {
+        name:"Adidas Sports Shoes",
+        price:4999,
+        rating:5,
+        image:"adidas.jpg",
+    }
+];
