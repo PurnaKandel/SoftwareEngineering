@@ -77,6 +77,7 @@ const products=[
     }
 ];
 
+//automatic slidding
 setInterval(function(){
     if(currentIndex<cards.length-1){
         currentIndex++;
@@ -85,3 +86,22 @@ setInterval(function(){
     }
     updateSlider();
 },3000);
+
+// pauses the slidder when theuser hovers ovet it
+let autoSlide=setInterval(nextSlide,3000);
+function nextSlide(){
+    if(currentIndex<cards.length-1){
+        currentIndex++;
+    }else{
+        currentIndex=0;
+    }
+    updateSlider();
+}
+slider.addEventListener("mouseenter",function(){
+    clearInterval(autoSlide);
+});
+slider.addEventListener("mouseenter",function(){
+    autoSlide=setInterval(nextSlide,3000);
+});
+
+
