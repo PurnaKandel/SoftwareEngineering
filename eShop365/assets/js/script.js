@@ -30,37 +30,41 @@ button.forEach(function(button) {
 const slider = document.querySelector(".product-grid");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
- let scrollAmount = 0;
- 
+ //let scrollAmount = 0;
+
 const cards=document.querySelectorAll(".product-card");
-const cardwidth=280;
+//const cardWidth=280;
+const cardWidth=cards[0].offsetWidth +20;
 let currentIndex =0;
+
 function  updateSlider(){
     slider.style.transform=
     `translateX(-${currentIndex*cardWidth}px)`;
     }
     
 nextBtn.addEventListener("click", () => {
-    scrollAmount += 280;
-    slider .style.transform = `translateX(-${scrollAmount}px)`;
-    if(currentIndex<cards.length-1){
+    //scrollAmount += 280;
+    //slider .style.transform = `translateX(-${scrollAmount}px)`;
+
+    if(currentIndex < cards.length -1 ){
+        currentIndex++;        
+     } else{
         currentIndex=0;
-    }
+        }
     updateSlider();
 });
 
 prevBtn.addEventListener("click", () => {
-scrollAmount -= 280;
-if(scrollAmount < 0){
-    scrollAmount = 0;
+//scrollAmount -= 280;
+//if(scrollAmount < 0){
+    //scrollAmount = 0;
   if(currentIndex>0){
     currentIndex--;
 }else{
-    currentIndex=cards.length-1;
+    currentIndex= cards.length-1;
 }
 updateSlider();
-}
-slider.style.transform =`translateX(-${scrollAmount}px)`;
+//slider.style.transform =`translateX(-${scrollAmount}px)`;
 });
 
 /*  const products=[
@@ -80,14 +84,14 @@ slider.style.transform =`translateX(-${scrollAmount}px)`;
 */
 
 //automatic slidding
-setInterval(function(){
-    if(currentIndex<cards.length-1){
-        currentIndex++;
+/* setInterval(function(){
+    if(currentIndex< cards.length - 1){
+      currentIndex++;
     }else{
         currentIndex=0;
     }
     updateSlider();
-},3000);
+},3000); */
 
 // pauses the slidder when theuser hovers ovet it
 let autoSlide=setInterval(nextSlide,3000);
@@ -99,11 +103,19 @@ function nextSlide(){
     }
     updateSlider();
 }
+/* to slider pause */
 slider.addEventListener("mouseenter",function(){
     clearInterval(autoSlide);
 });
-slider.addEventListener("mouseenter",function(){
+
+/* slider.addEventListener("mouseenter",function(){
     autoSlide=setInterval(nextSlide,3000);
+}); */
+
+slider.addEventListener("mouseleave",function(){
+    clearInterval(autoSlide);  // clear the old timer
+    autoSlide=setInterval(nextSlide,3000);
+    //autoSlide=setInterval(nextSlide, 3000);   //safer version to create only one timer.(If the mouse leaves multiple times, you may create multiple timers)
 });
 
 
